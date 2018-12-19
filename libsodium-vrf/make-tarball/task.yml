@@ -1,0 +1,18 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: ubuntu
+
+inputs:
+- name: libsodium
+- name: libsodium-fork-ci
+- name: src-version-file
+
+outputs:
+- name: tarball
+
+run:
+  path: libsodium-fork-ci/libsodium-vrf/make-tarball/run.sh

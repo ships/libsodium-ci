@@ -1,0 +1,17 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: ubuntu
+
+inputs:
+- name: libsodium-fork-src
+- name: libsodium-fork-ci
+
+outputs:
+- name: src-version-file
+
+run:
+  path: libsodium-fork-ci/libsodium-vrf/get-version-string/run.sh
